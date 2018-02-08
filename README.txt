@@ -1,3 +1,3 @@
-To override the files included by the parent theme, we must have a copy here that uses the same name and folder structure.
+Drupal 6.x
 
-CSS and JS folders 
+Theme used during transition to 960 col-based layout
