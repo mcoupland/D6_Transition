@@ -1,0 +1,51 @@
+<?php 
+
+//echo get_env_variable('ahenv_harperservice_membershipservice');
+
+function get_env_variable($raw_var){
+	$env = variable_get('environment');
+	//print "Environment:$env<br />";
+	//$raw_var = "ahenv_harperservice_membershipservice";
+	//$raw_var = "ahenv_key256";
+	//print "raw_var: $raw_var<br />";
+	$var_parts = explode('ahenv_', $raw_var);
+	//print "var_parts: ";
+	//var_dump($var_parts);
+	//print "<br />";
+
+	if(sizeof($var_parts) == 2){
+		$var_name = $var_parts[1];
+		$raw_value = variable_get($raw_var);
+		$value_parts = explode('"|,|"',$raw_value);
+		if(sizeof($value_parts) == 2){
+			$prod_value = $value_parts[0];
+			if(strrpos($prod_value, '"') == 0){
+				$prod_value = substr($prod_value, 1);
+			}
+			$staging_value = $value_parts[1];
+			if(substr($staging_value, strlen($staging_value)-1) == '"' ){
+				$staging_value = substr($staging_value, 0, strlen($staging_value)-1);
+			}
+			if($env == "STAGING" && !empty($staging_value)){
+				//print "return staging: $staging_value<br />";
+				return $staging_value;
+			}
+			elseif(!empty($prod_value)){
+				//print "return prod: $prod_value<br />";
+				return $prod_value;
+			}
+		}
+		else{
+			//print "return variable_get: ".variable_get($raw_var)."<br />";
+			return variable_get($raw_var);
+		}
+	}
+	else{
+		//print "doesn't start with 'ahenv_', not an environment variable: $var_name<br />";
+		//print "returning normal variable: $value<br />";	
+		return variable_get($raw_var);
+	}
+	//just in case...
+	return variable_get($raw_var);
+}
+?>

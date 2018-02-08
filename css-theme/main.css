@@ -1,0 +1,30 @@
+body{
+	background-color:#ccc;
+`	font-family: "Benton Sans Regular", Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+}
+div, span, p, ul, li, a{font-size:10pt;line-height:13pt;font-family: "Benton Sans Regular", Verdana, Geneva, sans-serif;} 
+div{}
+span{}
+p{}
+ul{}
+li, li.leaf{list-style-image:none;list-style-type:none;}
+a, a:hover, a:active, a:visited{text-decoration:none;}
+h2{font-family: 'WhitmanDisplay Regular', Georgia, Serif;}
+h3{
+	font-family: "Benton Sans Regular", Verdana, Geneva, sans-serif;
+	font-weight: bold;	
+}
+h4{}
+h5{}
+h6{}
+img{}
+
+
+div#page{background-color:#fff;}
+div#footer{background-color:#000;color:#fff;padding-top:5px;padding-bottom:5px;}
+div#footer a{color:#fff;}
+div#footer ul li{font-size:1.2em;text-transform:uppercase;}

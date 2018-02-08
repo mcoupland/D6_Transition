@@ -1,0 +1,17 @@
+.sidebar{border-top: 10px solid #000;margin-top:10px;background-color: #EEE;}
+.sidebar h3{padding:5px 10px;text-transform:uppercase;}
+.sidebar div.content{padding:0 10px 10px 10px;}
+.sidebar ul{list-style:none;padding:0 0 0 10px;}
+.sidebar ul li{}
+
+.sidebar.lead{border-top:none;}
+.sidebar.lead h3{background-color:#000; color:#fff;}
+.sidebar.lead div.content{margin-top:10px;}
+
+.sidebar.footer{margin-top:0;border-top:none;}
+
+.sidebar.ad{border-top:none;}
+.sidebar.quote{border-top:none;}
+.sidebar.map{border-top:none;}
+.sidebar.filter{}
+.sidebar.list{}

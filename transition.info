@@ -1,0 +1,64 @@
+; $Id: transition.info.txt,v 1.16.2.2 2010/06/26 16:05:31 johnalbin Exp $
+
+name        = Transition Theme
+description = A sub-theme of the andrewhaper theme that uses 960 grid, semantic html and clean css
+screenshot = screenshot.png
+core       = 6.x
+base theme = andrew_harper
+
+; deprecated css inherited from andrew_harper theme - replacing with empty files
+stylesheets[all][]   = main.css
+stylesheets[all][]   = ah.css
+stylesheets[all][]   = css/960_24_col.css
+stylesheets[all][]   = css/960_16_col.css
+stylesheets[all][]   = css/960_12_col.css
+stylesheets[all][]   = css/block-editing.css
+stylesheets[all][]   = css/blocks.css
+stylesheets[all][]   = css/classes.css
+stylesheets[all][]   = css/comments.css
+stylesheets[all][]   = css/layout-fixed.css
+stylesheets[all][]   = css/messages.css
+stylesheets[all][]   = css/navigation.css
+stylesheets[all][]   = css/pages.css
+stylesheets[print][] = css/print.css
+stylesheets[all][]   = css/tabs.css
+stylesheets[all][]   = css/typography.css
+stylesheets[all][]   = css/utility-bar.css
+stylesheets[all][]   = css/views-styles.css
+
+; these are the real styles used by this sub theme
+stylesheets[all][]   = theme-css/reset.css
+stylesheets[all][]   = theme-css/960_12_col.css
+stylesheets[all][]   = theme-css/main.css
+stylesheets[all][]   = theme-css/sidebar.css
+stylesheets[all][]   = theme-css/content.css
+stylesheets[all][]   = theme-css/hero.css
+stylesheets[all][]   = theme-css/navigation.css
+
+stylesheets[all][]   = theme-css/test.css
+
+
+; regions
+regions[utility_bar]	= Utility Bar
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[navigation]     = Navigation bar
+regions[admin_navigation]   = Admin Navigation bar
+regions[highlight]      = Highlighted content
+regions[content_top]    = Content top
+regions[content_bottom] = Content bottom
+regions[header]         = Header
+regions[footer]         = Footer
+regions[page_closure]   = Page closure
+
+; plugins
+plugins[panels][layouts] = layouts
+
+; deprecated javascript inherited from andrew_harper theme - replacing with empty files
+scripts[] = js/initialize.js
+
+; javascript
+scripts[] = theme-js/google-analytics.js
+scripts[] = theme-js/searchforce-tracking.js
+scripts[] = theme-js/cloudfront-performable.js
+scripts[] = theme-js/initialize.js
